@@ -1,0 +1,68 @@
+body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            color: #333;
+        }
+
+        #conteudo-md {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        #btnResultados {
+            margin: 20px 0;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            background-color: #2563eb;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #btnResultados:hover {
+            background-color: #1d4ed8;
+        }
+
+        #containerResultados {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .exercicio {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        .exercicio h3 {
+            margin-top: 0;
+            color: #2563eb;
+        }
+
+        .resultado {
+            padding: 12px;
+            background-color: #f3f4f6;
+            border-radius: 5px;
+            font-family: Consolas, monospace;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+        }
+
+        .nivel {
+            margin-top: 30px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 8px;
+        }
+
+        [hidden] {
+            display: none !important;
+        }

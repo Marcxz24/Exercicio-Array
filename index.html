@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atividade de Array — Supermercado Bom Dia</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Atividade para fixar Array</h1>
+    <h2>Exercícios de Arrays — Supermercado Bom Dia</h2>
+
+    <!-- Conteúdo da atividade em Markdown -->
+    <div id="conteudo-md">
+        Carregando exercícios...
+    </div>
+
+    <!-- Botão para abrir ou fechar os resultados -->
+    <button
+        id="btnResultados"
+        type="button"
+        aria-expanded="false"
+        aria-controls="containerResultados">
+        Mostrar resultados
+    </button>
+
+    <!-- Container dos resultados dos 21 exercícios -->
+    <section id="containerResultados" hidden>
+        <h2>Resultados dos exercícios</h2>
+
+        <div id="conteudoResultados"></div>
+    </section>
+
+    <!-- Biblioteca responsável por converter Markdown em HTML -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <!-- Lógica da aplicação e dos exercícios -->
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
