@@ -15,10 +15,10 @@ import { executar as executarExercicio14 } from "./exercicios/exercicio14.js";
 import { executar as executarExercicio15 } from "./exercicios/exercicio15.js";
 import { executar as executarExercicio16 } from "./exercicios/exercicio16.js";
 import { executar as executarExercicio17 } from "./exercicios/exercicio17.js";
-//import { executar as executarExercicio18 } from "./exercicios/exercicio18.js";
-//import { executar as executarExercicio19 } from "./exercicios/exercicio19.js";
-//import { executar as executarExercicio20 } from "./exercicios/exercicio20.js";
-//import { executar as executarExercicio21 } from "./exercicios/exercicio21.js";
+import { executar as executarExercicio18 } from "./exercicios/exercicio18.js";
+import { executar as executarExercicio19 } from "./exercicios/exercicio19.js";
+import { executar as executarExercicio20 } from "./exercicios/exercicio20.js";
+import { executar as executarExercicio21 } from "./exercicios/exercicio21.js";
 
 // 1. DADOS COMPARTILHADOS
 
@@ -163,14 +163,14 @@ const exerciciosPorNivel = [
     // Nível 5: exercícios 17 a 19
     [
         { numero: 17, executar: executarExercicio17 },
-        //{ numero: 18, executar: executarExercicio18 },
-        //{ numero: 19, executar: executarExercicio19 }
+        { numero: 18, executar: executarExercicio18 },
+        { numero: 19, executar: executarExercicio19 }
     ],
 
     // Nível 6: exercícios 20 e 21
     [
-        //{ numero: 20, executar: executarExercicio20 },
-        //{ numero: 21, executar: executarExercicio21 }
+        { numero: 20, executar: executarExercicio20 },
+        { numero: 21, executar: executarExercicio21 }
     ]
 ];
 
