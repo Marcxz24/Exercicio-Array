@@ -1,68 +1,166 @@
+/* Garante que padding e bordas não ultrapassem a largura da tela */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --bg-main: #0f172a;
+    --bg-card: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+}
+
 body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 40px;
-            color: #333;
-        }
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 16px;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    width: 100%;
+    overflow-x: hidden; /* Evita qualquer rolagem lateral indesejada na tela */
+}
 
-        #conteudo-md {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-        }
+#conteudo-md {
+    background: var(--bg-card);
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
 
-        #btnResultados {
-            margin: 20px 0;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 6px;
-            background-color: #2563eb;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
+#btnResultados {
+    width: 100%;
+    margin: 16px 0;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+    transition: background-color 0.2s, transform 0.1s;
+}
 
-        #btnResultados:hover {
-            background-color: #1d4ed8;
-        }
+#btnResultados:hover {
+    background-color: var(--primary-hover);
+}
 
-        #containerResultados {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
+#btnResultados:active {
+    transform: scale(0.98);
+}
 
-        .exercicio {
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-        }
+#containerResultados {
+    margin-top: 24px;
+    padding: 0; /* Removido padding excessivo para alinhar com o body */
+    background-color: transparent;
+    border: none;
+    border-radius: 16px;
+    width: 100%;
+}
 
-        .exercicio h3 {
-            margin-top: 0;
-            color: #2563eb;
-        }
+.exercicio {
+    margin-bottom: 16px;
+    padding: 18px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    width: 100%;
+    overflow-wrap: break-word;
+}
 
-        .resultado {
-            padding: 12px;
-            background-color: #f3f4f6;
-            border-radius: 5px;
-            font-family: Consolas, monospace;
-            white-space: pre-wrap;
-            overflow-wrap: anywhere;
-        }
+.exercicio h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    font-size: 1.15rem;
+    font-weight: 600;
+    word-break: break-word;
+}
 
-        .nivel {
-            margin-top: 30px;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 8px;
-        }
+.resultado {
+    padding: 12px 14px;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    font-family: 'Fira Code', Consolas, monospace;
+    font-size: 13px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    color: #f9f9fa;
+    width: 100%;
+}
 
-        [hidden] {
-            display: none !important;
-        }
+.nivel {
+    margin-top: 36px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 8px;
+    color: #f8fafc;
+    font-weight: 700;
+}
+
+/* Garante que o container do Markdown fique limitado à largura da tela */
+#conteudo-md {
+    max-width: 100%;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Ajusta blocos de código formatados dentro do Markdown */
+#conteudo-md pre {
+    background-color: #1e293b;
+    color: #f8fafc;
+    padding: 12px;
+    border-radius: 8px;
+    white-space: pre-wrap;       /* Quebra linhas longas de código */
+    word-break: break-word;       /* Força a quebra de palavras muito extensas */
+    overflow-x: auto;            /* Se ainda houver código fixo, permite rolagem APENAS no código */
+    max-width: 100%;
+}
+
+/* Ajusta trechos de código inline (ex: `const x = 1`) */
+#conteudo-md code {
+    font-family: 'Fira Code', Consolas, monospace;
+    font-size: 0.9em;
+    word-break: break-word;
+}
+
+/* Garante que listas e imagens do Markdown não estourem o container */
+#conteudo-md ul, 
+#conteudo-md ol {
+    padding-left: 20px;          /* Reduz o recuo das listas no celular */
+}
+
+#conteudo-md img {
+    max-width: 100%;             /* Evita que imagens ultrapassem o container */
+    height: auto;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* Ajustes visuais extra para mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    #conteudo-md {
+        padding: 16px;
+        border-radius: 12px;
+    }
+}
