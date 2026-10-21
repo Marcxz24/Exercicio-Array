@@ -10,11 +10,11 @@ import { executar as executarExercicio9 } from "./exercicios/exercicio9.js";
 import { executar as executarExercicio10 } from "./exercicios/exercicio10.js";
 import { executar as executarExercicio11 } from "./exercicios/exercicio11.js";
 import { executar as executarExercicio12 } from "./exercicios/exercicio12.js";
-//import { executar as executarExercicio13 } from "./exercicios/exercicio13.js";
-//import { executar as executarExercicio14 } from "./exercicios/exercicio14.js";
-//import { executar as executarExercicio15 } from "./exercicios/exercicio15.js";
-//import { executar as executarExercicio16 } from "./exercicios/exercicio16.js";
-//import { executar as executarExercicio17 } from "./exercicios/exercicio17.js";
+import { executar as executarExercicio13 } from "./exercicios/exercicio13.js";
+import { executar as executarExercicio14 } from "./exercicios/exercicio14.js";
+import { executar as executarExercicio15 } from "./exercicios/exercicio15.js";
+import { executar as executarExercicio16 } from "./exercicios/exercicio16.js";
+import { executar as executarExercicio17 } from "./exercicios/exercicio17.js";
 //import { executar as executarExercicio18 } from "./exercicios/exercicio18.js";
 //import { executar as executarExercicio19 } from "./exercicios/exercicio19.js";
 //import { executar as executarExercicio20 } from "./exercicios/exercicio20.js";
@@ -154,15 +154,15 @@ const exerciciosPorNivel = [
 
     // Nível 4: exercícios 13 a 16
     [
-        //{ numero: 13, executar: executarExercicio13 },
-        //{ numero: 14, executar: executarExercicio14 },
-        //{ numero: 15, executar: executarExercicio15 },
-        //{ numero: 16, executar: executarExercicio16 }
+        { numero: 13, executar: executarExercicio13 },
+        { numero: 14, executar: executarExercicio14 },
+        { numero: 15, executar: executarExercicio15 },
+        { numero: 16, executar: executarExercicio16 }
     ],
 
     // Nível 5: exercícios 17 a 19
     [
-        //{ numero: 17, executar: executarExercicio17 },
+        { numero: 17, executar: executarExercicio17 },
         //{ numero: 18, executar: executarExercicio18 },
         //{ numero: 19, executar: executarExercicio19 }
     ],
